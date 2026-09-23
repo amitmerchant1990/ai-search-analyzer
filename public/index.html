@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Search Visibility Analyzer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">Search visibility / one-time analysis</p>
+      <h1>See where your domain shows up in AI search.</h1>
+      <p class="lede">Compare Google AI Mode answers and references with regular Google results for the queries that matter to you.</p>
+    </header>
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Start an analysis</h2>
+      <form id="analyze-form">
+        <label for="domain">Domain</label>
+        <input id="domain" name="domain" type="text" placeholder="example.com" autocomplete="url" required>
+        <label for="queries">Queries <span class="hint">one per line, up to 10</span></label>
+        <textarea id="queries" name="queries" rows="6" placeholder="best tools for remote teams\nhow does example.com compare with alternatives" required></textarea>
+        <p class="note">Your API key stays on the server. Queries are sent to this app and SearchApi for a live result.</p>
+        <button id="submit" type="submit">Analyze visibility <span aria-hidden="true">→</span></button>
+        <p id="form-error" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+    <section id="results" aria-live="polite" hidden></section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
