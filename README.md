@@ -4,10 +4,16 @@ Small Node.js app for comparing a domain's presence in Google AI Mode and regula
 
 ## Run locally
 
-Set the server-side key.
+Set the [Search API](https://www.searchapi.io/docs/google?utm_source=Dev&utm_medium=Ambassador&utm_campaign=amitmerchant.com) key.
 
 ```sh
 export SEARCHAPI_API_KEY=your_key_here
+```
+
+Or set it in the `.env` file directly.
+
+```
+SEARCHAPI_API_KEY=your_key_here
 ```
 
 Start the app.
@@ -16,13 +22,13 @@ Start the app.
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Then open [http://localhost:3000](http://localhost:3000).
 
 The start script loads `.env` automatically. Restart the server after changing the key.
 
-Run the tests with `npm test`.
+## Test
 
-This is intentionally a one-time analyzer. It does not store runs or provide historical/scheduled tracking yet. Search results are live and can vary by query, location, language, and time.
+Run the tests with `npm test`.
 
 ## License
 
